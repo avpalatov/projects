@@ -173,5 +173,6 @@ send_message_telegram = TelegramOperator(
     dag=dag,
 )
 
+dag.doc_md = __doc__
 
 upload >> [send_email, send_message_telegram]
